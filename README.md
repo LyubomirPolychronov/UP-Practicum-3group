@@ -5,3 +5,4 @@
 ## Теми
 
 - **Week 01**: [Въведение в курса](https://github.com/alexsrebrov/UP-Practicum-3group/tree/main/Week01)
+- **Week 02**:  [TBD](https://github.com/alexsrebrov/UP-Practicum-3group/tree/main/Week02) [[Задачи](https://github.com/alexsrebrov/UP-Practicum-3group/tree/main/Week02/tasks)]
