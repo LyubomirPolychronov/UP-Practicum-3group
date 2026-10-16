@@ -169,7 +169,7 @@ _Вход: 26_
 _Изход:_
 
 ```
-Rooms for 1: 0
+Rooms for 1: 1
 Rooms for 2: 0
 Rooms for 5: 1
 Rooms for 7: 0
