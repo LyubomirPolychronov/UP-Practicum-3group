@@ -1,3 +1,86 @@
+# Теоретични задачи
+1. Какво ще отпечатат следния фрагмент код
+```c++
+#include <iostream>
+
+int main()
+{
+  int iterator = 2;
+  do
+  {
+    std::cout << iterator-- << ' ';
+    if(iterator < 7 && iterator > 2)
+    {
+      break;
+    }
+
+    else if (iterator = 7)
+    {
+      std::cout << "* ";
+    }
+
+  } while ( iterator > 0 );
+}
+```
+
+2. Какво ще отпечатат следния фрагмент код
+```c++
+#include <iostream>
+int main()
+{
+    int i = 1;
+    while (i = 12)
+    {
+        if (i == 7)
+        {
+           break;
+        }
+        if (i == 1)
+        {
+          continue;
+        }
+        std::cout << --i << std::endl;
+        i += 7;
+    }
+    return 0;
+}
+```
+
+3. Какво ще отпечатат следния фрагмент код
+```c++
+#include <iostream>
+int main()
+{
+    int a = 0;
+    do
+    {
+        std::cout << "a";
+        a--;
+        continue;
+    } while(a++);
+    return 0;
+}
+```
+
+4. Какво ще отпечатат следния фрагмент код
+```c++
+#include <iostream>
+int main()
+{
+  int counter = 0;
+  while (counter < 100)
+  {
+    ++counter;
+    if (counter % 2 != 0)
+    {
+        continue;
+    }
+    std::cout << counter << “ “;
+  }
+  return 0;
+}
+```
+
 # Задачи
 
 ## Задача 1
