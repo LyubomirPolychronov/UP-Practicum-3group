@@ -1,0 +1,176 @@
+#include <iostream>
+int main()
+{
+    // Task 1
+    int num1, res = 1;
+    std::cin >> num1;
+    
+    for (int i = 1; i <= num1; i++) {
+        res *= i;
+    }
+    std::cout << num1 << "! = " << res << std::endl;
+
+    // Task 2
+    int evenCounter = 0, num2;
+
+    while (evenCounter < 3) {
+        std::cin >> num2;
+        if (!(num2 % 2)) {
+            evenCounter++;
+            continue;
+        }
+        evenCounter = 0;
+    }
+    std::cout << "Finally three even numbers" << std::endl;
+
+
+    // Task 3
+    unsigned num3;
+    std::cin >> num3;
+
+    for (unsigned i = 2; i * i < num3; i++) {
+        if (!(num3 % i)) {
+            std::cout << "true\n";
+            break;
+        }
+    }
+
+
+    // Task 4
+    int num4, prev2 = 0, prev = 1, res;
+    std::cin >> num4;
+    
+    for (int i = 0; i < num4; i++) {
+        res += prev + prev2;
+        prev2 = prev;
+        prev = prev + prev2;
+    }
+
+
+    // Task 5
+    int num5, sum = 0;
+    std::cin >> num5;
+    
+    while (num5) {
+        sum += num5 / 10;
+    }
+    std::cout << sum << "\n";
+
+
+    // Task 6
+    int num5, digitsCnt = 0;
+    std::cin >> num5;
+
+    while (num5) {
+        digitsCnt++;
+    }
+    std::cout << digitsCnt << "\n";
+
+    // Task 7
+    int num7;
+    std::cin >> num7;
+
+    int lastNum = 1;
+    bool add = true;
+    do {
+        for (int i = 1; i <= lastNum; i++) {
+            std::cout << i << " ";
+        }
+        std::cout << "\n";
+
+        if (lastNum == num7) {
+            add = false;
+        }
+
+        if (add) {
+            lastNum++;
+        }
+        else {
+            lastNum--;
+        }
+    } while (lastNum > 1);
+
+
+    // Task 8
+    // 8.1 
+
+    for (int i = 1; i < 10; i+=2) {
+        for (int j = 0; j < 10; j++) {
+            for (int k = 1; k < 10; k+=2) {
+                for (int l = 0; l < 10; l++) {
+                    if (i + k == l) {
+                        std::cout << i << j << k << l << " ";
+                    }
+                }
+            }
+        }
+    }
+
+    std::cout << "\n";
+
+    // 8.2
+    int start = 1000, end = 9999;
+    for (int i = start; i < end; i++) {
+        int first = i / 1000;
+        int second = i / 100 % 10;
+        int third = i / 10 % 10;
+        int fourth = i % 10;
+
+        if (first % 2 == 1 && third % 2 == 1 && first + second == fourth) {
+            std::cout << i << " ";
+        }
+    }
+    std::cout << "\n";
+
+
+    // Task 9
+    int num9;
+    std::cin >> num9;
+
+    for (int i = 1; i * i <= num9; i++) {
+        if (!(num9 % i)) {
+            std::cout << i  << " " << num9 / i << "\n";
+        }
+    }
+    std::cout << "\n";
+
+    // Task 10
+    int res = 0, last;
+    bool shouldCount = true;
+
+    while(true) {
+        int num10;
+        std::cin >> num10;
+
+        if (last == num10) {
+            std::cout << res << "\n";
+            break;
+        }
+        
+        if (num10 % 5 == 0) {
+            continue;
+        }
+
+        if (shouldCount) {
+            res += num10;
+        }
+        shouldCount = !shouldCount;
+        last = num10;
+    } 
+
+    // Task 11
+    int num11, min = INT32_MAX, max = INT32_MIN;
+    std::cin >> num11;
+
+    for (int i = 0; i < num11; i++) {
+        int temp;
+        std::cin >> temp;
+        if (min > temp) {
+            min = temp;
+        }
+        if (max < temp) {
+            max = temp;
+        }
+    }
+    std::cout << min << " " << max << "\n";
+}
